@@ -1,0 +1,1 @@
+- [ ] satuin gambar, dengan cara cari seluruh format gambarnya pake glob, terus pindahin ke satu folder aja 
