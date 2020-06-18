@@ -10,6 +10,10 @@ imagehash = "^4.1.0"
 bing---image-downloader = "^1.0.2"
 bing-image-downloader = "^1.0.2"
 tqdm = "^4.46.1"
+torch = "^1.5.0"
+torchvision = "^0.6.0"
+fastai = "^1.0.61"
+sklearn = "^0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.3"
