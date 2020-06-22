@@ -1,4 +1,6 @@
 *.csv
+dataset/
 models/
 raw/
+not_sert/
 __pycache__/
