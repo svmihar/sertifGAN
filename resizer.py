@@ -20,7 +20,7 @@ image_bermasalah = []
 
 
 def resize(img, size=(R, R)):
-    new = im.resize(size, Image.ANTIALIAS)
+    new = img.resize(size, Image.ANTIALIAS)
     return new
 
 
@@ -31,23 +31,24 @@ def convert_to_srgb(img):
 
 
 def convert(img):
-    try:
-        im = Image.open(img)
-        new = convert_to_srgb(im)
-        new = resize(im)
+    try: 
+        image = Image.open(img)
+        new = convert_to_srgb(image)
+        new = resize(new)
         new.save("./images/resized/" + img.split("/")[-1].lower())
         return img
-    except Exception as e:
-        logging.info(f"{img} failed")
-        image_bermasalah.append(img)
-        pass
+    except Exception as e: 
+        logging.info(f'{a} bermasalah')
+        logging.info(e)
+        image_bermasalah.append(a)
 
 
 def main():
-    logging.info(f"total {len(image_bermasalah)} gambar bermasalah")
-    logging.info("saving to bermasalah.txt now")
     with ThreadPoolExecutor(max_workers=4) as mp:
         hasil = mp.map(convert, images)
+
+    logging.info(f"total {len(image_bermasalah)} gambar bermasalah")
+    logging.info("saving to bermasalah.txt now")
     with open("bermasalah.txt", "w") as f:
         for a in image_bermasalah:
             f.writelines(f"{a}\n")
