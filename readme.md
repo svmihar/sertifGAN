@@ -6,6 +6,8 @@
 # dataset
 - semua, full size, >90 accuracy on sertif_clf
 	- [sertifikat.zip (restricteD)](https://drive.google.com/file/d/1o6SM3Iq6KN0WrmYA6Mp3HwjRFmh9u-n7/view?usp=sharing)
+- resized, non transparent, converted to 512*512
+	- [sertifikat_resized.zip (restricted)](https://drive.google.com/file/d/1W-Iz_I__7oh5Qm1QA7QOX1NeAn7kZtYg/view?usp=sharing)
 
 
 see you in a month. lol.
@@ -23,3 +25,5 @@ fixes to do:
 - [x] sertifikat classifier
 - [x] gak usah di dedupe, 'agak mirip' is fine -> set the threshold to be >=2
 - [x] re-label the sertifikat classifier images, for a better criteria
+- [x] watch dog kalo model udah selesai training -> upload ke drive
+- [x] watch dog biar modelnya yang disimpen cuman 2 aja 
