@@ -10,8 +10,6 @@ def on_created(event):
     print("uploading to drive")
     os.system(f"drive add_remote --file {event.src_path}")
 
-
-def on_any_event(event): 
     path_list = event.src_path.split('/')
     path = '/'.join(path_list[:-1])
     files = get_files(path)
@@ -29,9 +27,8 @@ def delete_files(files):
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else "./models/default/"
-    handler = pmh("*", "", False, True)
+    handler = pmh("*.pt", "", False, True)
     handler.on_created = on_created
-    handler.on_any_event = on_any_event
     my_observer = Observer()
     my_observer.schedule(handler, path, recursive=True)
     my_observer.start()

@@ -2,7 +2,7 @@ import os
 
 
 command = """stylegan2_pytorch --data images/ \
-    --batch-size 16 \
+    --batch-size 11 \
     --gradient-accumulate-every 1 \
     --cl-reg \
     --attn-layers 1 \
