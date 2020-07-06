@@ -9,5 +9,4 @@ command = '''stylegan2_pytorch --data images/ \
     --cl-reg \
     --attn-layers 1 \
     --network-capacity 18'''
-
 os.system(command)
